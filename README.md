@@ -1,21 +1,35 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## 설치
 
-First, run the development server:
+새 폴더를 만들고 주소창에 `cmd.` 입력
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+CMD 창이 뜨면 `npx create-next-app@latest` 입력
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+해당 폴더에 Next.js가 설치
 
+마우스 우클릭을 통해 IDE로 폴더를 연다
+
+터미털 창에서 `npm run dev` 입력
+
+로컬 서버([http://localhost:3000](http://localhost:3000)) 실행
+
+## 수정
+
+설치 후 수정할 파일은 다음과 같다.
+
+* layout.js : html 코드 포함
+* page.js : Layout 포함 콘텐츠
+* globals.css : CSS 스타일
+
+## 배포
+
+`npm run build`로 배포 가능한 App 생성 (.next 폴더 생성)
+
+`run npm start`로 .next 폴더 서비스 시작
+
+
+---
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
