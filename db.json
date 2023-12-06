@@ -2,13 +2,13 @@
   "topics": [
     {
       "title": "HTML",
-      "body": "Hyper-text markup language",
+      "body": "is ...",
       "id": 1
     },
     {
-      "title": "Package.json",
-      "body": "\npackage.json 파일은 프로젝트의 설정과 의존성 패키지 정보를 담고 있는 JSON 파일입니다. 여러분이 만든 Next.js 프로젝트의 package.json 파일은 다음과 비슷할 것입니다. 여기서 \"scripts\" 부분이 특히 중요합니다.",
-      "id": 3
+      "title": "beee",
+      "body": "bbb",
+      "id": 2
     }
   ]
 }

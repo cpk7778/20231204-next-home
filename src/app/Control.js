@@ -9,10 +9,13 @@ export function Control() {
     return (
         <>
             <h2>Control</h2>
+
             <Link href="/create">CREATE</Link> {}
-            {id ? <>
+
+            {id ? <> {/* conditional rendering pattern : {id ? <></> : null} */}
                 | {}
                 <Link href={"/update/" + id}>UPDATE</Link> | {}
+
                 <input
                     type="button"
                     value="DELETE"
