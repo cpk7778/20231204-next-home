@@ -13,17 +13,17 @@ export default async function RootLayout({children}) {
     return (
         <html>
         <body>
-        <Link href="/">HOME</Link>
+        <button class="button"><Link href="/">HOME</Link></button>
 
-        <ol>
-            {topics.map(topic => {
-                return <li key={topic.id}><Link href={`/read/${topic.id}`}>{topic.title}</Link></li>
-            })}
-        </ol>
+        {topics.map(topic => {
+            return <button class="button" key={topic.id}><Link href={`/read/${topic.id}`}>{topic.title}</Link></button>
+        })}
+
+        <Control></Control>
 
         {children}
 
-        <Control></Control>
+
 
         </body>
         </html>

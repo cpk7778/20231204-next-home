@@ -1,7 +1,7 @@
 export default function Home() {
     return (
         <>
-            <h1>개요</h1>
+            <h1>Home</h1>
 
             <li>Next.js를 사용한 입력/조회/수정/삭제 프로그램</li>
             <li>초기 화면 상단 HOME 버튼으로 src/app/page.js를 출력</li>

@@ -2,4 +2,33 @@ a {
     text-decoration: none;
 }
 
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
 
+input[type="text"]:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: #3498db; /* Change border color on focus */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    font-size: 14px;
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+textarea:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: #3498db; /* Change border color on focus */
+}
