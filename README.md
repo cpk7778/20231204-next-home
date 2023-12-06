@@ -2,7 +2,7 @@
 
 새 폴더를 만들고 주소창에 `cmd.` 입력
 
-CMD 창이 뜨면 `npx create-next-app@latest` 입력
+CMD에 `npx create-next-app@latest` 입력
 
 해당 폴더에 Next.js가 설치
 
@@ -11,6 +11,9 @@ CMD 창이 뜨면 `npx create-next-app@latest` 입력
 터미털 창에서 `npm run dev` 입력
 
 로컬 서버([http://localhost:3000](http://localhost:3000)) 실행
+
+JSON 서버 실행 : `npx json-server --port 9999 --watch db.json`
+
 
 # 2. 배포
 
@@ -440,3 +443,29 @@ export function Control() {
 ```
 
 # 11. Update 기능 구현
+
+# 12. 환경 변수
+루트에 .env.local 생성
+```javascript
+API_URL=http://localhost:9999/
+```
+서버 컴포넌트
+
+src/app/layout.js의 `http://localhost:9999` 를 `process.env.API_URL`로 변경 (서버 재시작 필요)
+```javascript
+const resp = await fetch('http://localhost:9999/topics', {cache: 'no-store'}) // 기존
+const resp = await fetch(process.env.API_URL+'topics', {cache: 'no-store'}) // 변경
+```
+
+클라이언트 컴포넌트 -> 
+
+`.env.local`
+```javascript
+API_URL=http://localhost:9999/ // 기존
+NEXT_PUBLIC_API_URL=http://localhost:9999/ // 변경
+```
+`src/app/create/page.js`
+```javascript
+fetch(process.env.API_URL+'topics', options)
+fetch(process.env.NEXT_PUBLIC_API_URL+'topics', options)
+```
